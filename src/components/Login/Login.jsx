@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
-import styles from './Registration.module.scss';
+import styles from './Login.module.scss';
 import bg from '../../img/regbg.jpg'
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
-const Registration = () => {
-	const [name, setName] = useState("");
-	const [fname, setFname] = useState("");
+const Login = () => {
 	const [mail, setMail] = useState("");
+	const [pass, setPass] = useState("");
 	const [saveAuth, setSaveAuth] = useState(false);
 	const [correctMail, setCorrectMail] = useState(true);
 	
@@ -24,7 +23,7 @@ const Registration = () => {
 	
 	const clicked = (e) => {
 		e.preventDefault();
-		if (!correctMail || mail === "" || name === "" || fname === "") {
+		if (!correctMail || mail === "" || pass === "") {
 			alert('Проверьте корректность введеных данных!')
 			return;
 		}
@@ -38,30 +37,25 @@ const Registration = () => {
 				<img src={bg} alt=""/>
 			</div>
 			<div className={styles.regform}>
-				<p className={styles.title}>Регистрация</p>
+				<p className={styles.title}>Вход</p>
 				<form action="#">
-					<input className={styles.text}
-						   type="text" value={name}
-						   onChange={item => setName(item.currentTarget.value)}
-						   placeholder="Имя"
-					/>
-					<input className={styles.text}
-						   type="text" value={fname}
-						   onChange={item => setFname(item.currentTarget.value)}
-						   placeholder="Фамилия"
-					/>
 					<input className={correctMail ? styles.text : styles.wrong}
-						   type="text" value={mail}
+						   type="login" value={mail}
 						   onChange={changeMail}
 						   placeholder="Почта"
+					/>
+					<input className={styles.text}
+						   type="password"
+						   onChange={item => setPass(item.currentTarget.value)}
+						   placeholder="Пароль"
 					/>
 					<div className={styles.in}>
 						<div className={styles.remember}>
 							<input className={styles.check} id="Remember" type="checkbox" onChange={() => setSaveAuth(!saveAuth)}/>
 							<label htmlFor="Remember">Запомнить меня</label>
 						</div>
-						<button type="submit" onClick={clicked}>Зарегистрироваться</button>
-						<p>Уже есть аккаунт? <Link className={styles.link} to="/login">Войти.</Link> </p>
+						<button type="submit" onClick={clicked}>Войти</button>
+						<p>Еще нет аккаунта? <Link className={styles.link} to="/registration">Регистрация.</Link> </p>
 					</div>
 				</form>
 			</div>
@@ -69,4 +63,4 @@ const Registration = () => {
 	);
 };
 
-export default Registration;
+export default Login;
