@@ -55,7 +55,7 @@ const Login = () => {
 							<label htmlFor="Remember">Запомнить меня</label>
 						</div>
 						<button type="submit" onClick={clicked}>Войти</button>
-						<p>Еще нет аккаунта? <Link className={styles.link} to="/registration">Регистрация.</Link> </p>
+						<p>Еще нет аккаунта? <Link className={styles.link} to="/">Регистрация.</Link> </p>
 					</div>
 				</form>
 			</div>
