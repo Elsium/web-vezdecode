@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/web-vezdecode/registration/static/css/main.bbaa9f44.css",
-    "main.js": "/web-vezdecode/registration/static/js/main.fb087515.js",
-    "static/media/regbg.jpg": "/web-vezdecode/registration/static/media/regbg.e0ffb68c339ee16c2967.jpg",
-    "index.html": "/web-vezdecode/registration/index.html",
-    "main.bbaa9f44.css.map": "/web-vezdecode/registration/static/css/main.bbaa9f44.css.map",
-    "main.fb087515.js.map": "/web-vezdecode/registration/static/js/main.fb087515.js.map"
+    "main.css": "/web-vezdecode/static/css/main.bbaa9f44.css",
+    "main.js": "/web-vezdecode/static/js/main.de36d03a.js",
+    "static/media/regbg.jpg": "/web-vezdecode/static/media/regbg.e0ffb68c339ee16c2967.jpg",
+    "index.html": "/web-vezdecode/index.html",
+    "main.bbaa9f44.css.map": "/web-vezdecode/static/css/main.bbaa9f44.css.map",
+    "main.de36d03a.js.map": "/web-vezdecode/static/js/main.de36d03a.js.map"
   },
   "entrypoints": [
     "static/css/main.bbaa9f44.css",
-    "static/js/main.fb087515.js"
+    "static/js/main.de36d03a.js"
   ]
 }
